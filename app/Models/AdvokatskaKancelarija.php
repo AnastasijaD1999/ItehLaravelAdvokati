@@ -10,6 +10,14 @@ class AdvokatskaKancelarija extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'naziv',
+        'adresa',
+        'email',
+        'website'
+    ];
+
+
     public function advokati()
     {
         return $this->hasMany(Advokat::class);

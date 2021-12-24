@@ -10,6 +10,13 @@ class Klijent extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime',
+        'prezime',
+        'email',
+        'advokat_id'
+    ];
+
     public function advokat()
     {
         return $this->belongsTo(Advokat::class);

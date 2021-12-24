@@ -11,6 +11,16 @@ class Advokat extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime',
+        'prezime',
+        'brojlicence',
+        'email',
+        'telefon',
+        'kancelarija_id'
+    ];
+
+
     public function kancelarija()
     {
         return $this->belongsTo(AdvokatskaKancelarija::class);
