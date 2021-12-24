@@ -14,6 +14,6 @@ class AdvokatSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Advokat::factory()->count(30)->create();
     }
 }
